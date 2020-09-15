@@ -100,6 +100,8 @@ def decrypt_message(cipher_text, key):
     return plain_text
 
 if __name__ == '__main__':
+    # Creates the ServerInfo object. A host, port, and key can be passed otherwise it will use the defaults.
     info = ServerInfo()
+    # Read the key from key_file.txt, otherwise it uses the default key.
     info.read_key()
     start_server(info)
